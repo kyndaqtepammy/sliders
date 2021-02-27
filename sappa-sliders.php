@@ -11,9 +11,13 @@ function admin_scripts() {
   wp_enqueue_script('sapjs', plugins_url( '/js/slick.js' , __FILE__ ), 'jquery', true);
 }
 add_action( 'wp_enqueue_scripts', 'admin_scripts' );
- ?>
- <div class="your-class">
-  <div>your content 1</div>
-  <div>your content 2</div>
-  <div>your content 3</div>
+
+function vertical_slider() { ?>
+  <div class="my-carousel">
+    <div><img src="<?php echo plugins_url('img/what-we-do.jpg', __FILE__ ) ?>"></div>
+    <div><img src="<?php echo plugins_url('img/where-we-are.jpg', __FILE__ ) ?>"></div>
+    <div><img src="<?php echo plugins_url('img/who-we-are.jpg', __FILE__ ) ?>"></div>
 </div>
+<?php  
+}
+ ?>
